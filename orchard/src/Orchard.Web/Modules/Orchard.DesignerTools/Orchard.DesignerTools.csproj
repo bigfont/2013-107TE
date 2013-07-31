@@ -46,6 +46,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClaySharp">
+      <HintPath>..\..\..\packages\ClaySharp.1.0.0\lib\ClaySharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -71,7 +74,7 @@
     <Content Include="Scripts\CodeMirror\htmlmixed.js" />
     <Content Include="Scripts\CodeMirror\javascript.js" />
     <Content Include="Scripts\CodeMirror\razor.js" />
-    <Content Include="Scripts\jquery.scrollTo-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.scrollTo-min.js" />
     <Content Include="Scripts\jquery.tmpl.js" />
     <Content Include="Scripts\jquery.tmpl.min.js" />
     <Content Include="Styles\CodeMirror\codemirror.css" />
@@ -126,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ShapeTracingTemplates.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
