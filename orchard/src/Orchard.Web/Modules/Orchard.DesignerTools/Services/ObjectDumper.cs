@@ -195,8 +195,7 @@ namespace Orchard.DesignerTools.Services {
         }
 
         private void DumpShape(IShape shape) {
-            var members = new Dictionary<string, object>();
-            ((IClayBehaviorProvider) (dynamic) shape).Behavior.GetMembers(() => null, shape, members);
+            var members = new Dictionary<string, object>();           
 
             foreach (var key in members.Keys.Where(key => !key.StartsWith("_"))) {
                 // ignore private members (added dynamically by the shape wrapper)
