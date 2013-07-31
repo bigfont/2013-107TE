@@ -4,7 +4,6 @@ using System.Collections;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
-using ClaySharp;
 using Orchard.ContentManagement;
 using Orchard.DisplayManagement;
 using Orchard.DisplayManagement.Shapes;
