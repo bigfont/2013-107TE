@@ -1,78 +1,364 @@
 /* STICKY FOOTER
 ================================================== */
-#footer, #push { height: 115px; }
+#footer, #push {
+    height: 115px;
+}
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
-    #footer { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 /* BOOTSWATCH ADJUSTMENTS
 ================================================== */
 /* Set the top margin on the content Section to 0. Change the top padding to 0 unless using a fixed navbar */
-#content { padding-top: 0; margin-top: 0; }
-.navbar-fixed-top + #content { padding-top: 60px; }
+#content {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.navbar-fixed-top + #content {
+    padding-top: 60px;
+}
 /* remove the bottom margin */
-.subnav { margin-bottom: 0; }
-.well { padding: 5px 10px; }
-.widget .page-header { margin: 0 0 5px; padding-bottom: 0; }
+.subnav {
+    margin-bottom: 0;
+}
+
+.well {
+    padding: 5px 10px;
+}
+
+.widget .page-header {
+    margin: 0 0 5px;
+    padding-bottom: 0;
+}
 
 /* BACK TO TOP
 ================================================== */
-#toTop { bottom: 10px; cursor: pointer; display: none; position: fixed; right: 5px; text-align: center; z-index: 500; }
-#toTop:hover { opacity: .7; }
+#toTop {
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 5px;
+    text-align: center;
+    z-index: 500;
+}
+
+    #toTop:hover {
+        opacity: .7;
+    }
 
 /* FORM ERROR STYLING
 ================================================== */
-.input-validation-error { border-color: #bd4247 !important; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important; -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important; box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important; }
-.validation-summary-errors, .field-validation-error { font-size: .9em; color: #bd4247; }
+.input-validation-error {
+    border-color: #bd4247 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+}
+
+.validation-summary-errors, .field-validation-error {
+    font-size: .9em;
+    color: #bd4247;
+}
 
 /* LOGIN/REGISTRATION FORM STYLING
 ================================================== */
 /* set size and position of login/registration form */
-.logreg { width: 450px; margin: 40px auto; padding: 20px 10px; border-radius: 10px; }
-.logreg .lregister { text-align: center; }
-/* adjust position/size of login/registration form labels and inputs */
-.logreg .control-label { width: 80px; }
-.logreg.changepassword .control-label, .logreg.lostpassword .control-label { padding-top: 0; }
-.logreg .controls { margin-left: 100px; }
-.logreg input[type="text"], .logreg .form-horizontal input[type="password"], .logreg .form-horizontal textarea { width: 90%; }
-/* form action style */
-.logreg .form-actions { padding: 5px 20px 5px; padding-left: 100px; background: transparent; border-top: 0px; }
+.logreg {
+    width: 450px;
+    margin: 40px auto;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+    .logreg .lregister {
+        text-align: center;
+    }
+    /* adjust position/size of login/registration form labels and inputs */
+    .logreg .control-label {
+        width: 80px;
+    }
+
+    .logreg.changepassword .control-label, .logreg.lostpassword .control-label {
+        padding-top: 0;
+    }
+
+    .logreg .controls {
+        margin-left: 100px;
+    }
+
+    .logreg input[type="text"], .logreg .form-horizontal input[type="password"], .logreg .form-horizontal textarea {
+        width: 90%;
+    }
+    /* form action style */
+    .logreg .form-actions {
+        padding: 5px 20px 5px;
+        padding-left: 100px;
+        background: transparent;
+        border-top: 0px;
+    }
 
 /* SEARCH WIDGET STYLING
 ================================================== */
-.widget-search-form { float: none !important; }
+.widget-search-form {
+    float: none !important;
+}
 
 /* TWITTER WIDGET STYLING
 ================================================== */
-.latest-twitter-list h5 { display: inline-block; margin: 0; }
-.latest-twitter-list { margin-left: 0; }
+.latest-twitter-list h5 {
+    display: inline-block;
+    margin: 0;
+}
+
+.latest-twitter-list {
+    margin-left: 0;
+}
 
 /* BLOG STYLING
 ================================================== */
 /* change padding on wells */
-.meta.well, .metadata.well, .comment.well { padding: 5px; }
-.tags, .meta { font-size: .9em; }
+.meta.well, .metadata.well, .comment.well {
+    padding: 5px;
+}
+
+.tags, .meta {
+    font-size: .9em;
+}
 /* move comment count inline with other meta items */
-.commentcount { margin-top: -20px !important; margin-right: 5px; }
+.commentcount {
+    margin-top: -20px !important;
+    margin-right: 5px;
+}
 /* remove list style and margin from blog list */
-.search-results.content-items, .blog-posts, .tagged-posts, .comment-list, .archive-trail + ul { list-style: none; margin-left: 0; }
+.search-results.content-items, .blog-posts, .tagged-posts, .comment-list, .archive-trail + ul {
+    list-style: none;
+    margin-left: 0;
+}
 /* reduce size of author & meta and display on same line */
-.comment-author, .cmeta { font-size: .9em; display: inline-block; }
+.comment-author, .cmeta {
+    font-size: .9em;
+    display: inline-block;
+}
 /* create space between meta and comment text */
-.comment p { margin-top: 5px; }
+.comment p {
+    margin-top: 5px;
+}
 /* add spacing for threaded comments */
-.comment .comment-list { margin: 20px 20px 0; }
+.comment .comment-list {
+    margin: 20px 20px 0;
+}
 /* adjust position/size of comment form labels and inputs */
-.comment-form .control-label { width: 80px; }
-.comment-form .controls { margin-left: 100px; }
-.comment-form .comment-text { width: 98%; }
+.comment-form .control-label {
+    width: 80px;
+}
+
+.comment-form .controls {
+    margin-left: 100px;
+}
+
+.comment-form .comment-text {
+    width: 98%;
+}
 
 /* SHAREBAR STYLING
 ================================================== */
-.well .sharebar { padding-top: 12px; }
+.well .sharebar {
+    padding-top: 12px;
+}
 
 /* PAGER STYLING
 ================================================== */
-.pager li > a, .pager li > span { -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+.pager li > a, .pager li > span {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+
+/* BIGFONT OVERRIDES */
+
+* {
+    background-color: transparent;
+}
+
+.well {
+    /* override united.css*/
+    background-color: transparent;
+    border: none;
+}
+
+html {
+    background-color: #A5A5BA;
+}
+
+body {
+    background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/homepage-background-section.JPG);
+    background-repeat: repeat;
+    background-position: 0 40px;
+    color: white;
+    display: table; /* for full height of its content */
+    margin: auto;
+    width: 1024px;
+}
+
+section#content div,
+section#content article,
+section#content header,
+section#content h1 {
+    /*margin-top: 0;
+    margin-bottom: 0;*/
+}
+
+.navbar-fixed-top + section#content {
+    padding-top: 40px;
+}
+
+
+section#content > div.container-fluid div.zone > article {
+    margin-left: 20px;
+    margin-right: 20px;
+    /*padding-left: 20px;
+        padding-right: 20px;*/
+}
+
+section#content > div.container-fluid div.zone-featured {
+    height: 150px; /* Sum of the stacked line heights and padding. */
+    position: relative;
+}
+
+    section#content > div.container-fluid div.zone-featured > article.widget-featured {
+        background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/titlegradient.PNG);
+        background-position: top;
+        background-repeat: repeat-x;
+        bottom: 0;
+        font-family: Arial;
+        margin-right: -512px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: absolute;
+        right: 50%;
+        text-align: center;
+        width: 1024px;
+    }
+
+        section#content > div.container-fluid div.zone-featured > article.widget-featured * {
+            margin-top: 0;
+            margin-bottom: 0;
+            display: block;
+        }
+
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 {
+            color: white;
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+            section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 > em {
+                color: #FFCC99;
+                font-size: 54px;
+                font-style: normal;
+                line-height: 54px;
+            }
+
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > p {
+            color: white;
+            font-size: 20px;
+            line-height: 20px;
+            margin-botton: 4px;
+        }
+
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > h2 {
+            color: white;
+            font-size: 16px;
+            line-height: 16px;
+        }
+
+
+section#content > div.container-fluid div.well > div.zone-aside-first {
+    background-color: transparent;
+    min-height: 600px;
+}
+
+    section#content > div.container-fluid div.well > div.zone-aside-first > article > p > img {
+        border: thick solid #CEA272;
+        background-color: white;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+section#content > div.container-fluid div.zone-content {
+}
+
+section#content > div.container-fluid div.zone-after-main > article.widget-sticky-footer {
+    background-color: transparent;
+    background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0px;
+    height: 200px;
+    right: 50%;
+    margin-right: -512px;
+    position: fixed;
+    width: 1024px;
+}
+
+footer#footer {
+}
+
+
+
+/* Carousel */
+#myCarousel {
+    margin-top: 80px;
+}
+
+    #myCarousel > .carousel-inner {
+        background: black;
+        border: thin solid #C7973A;
+    }
+
+    #myCarousel > ol.carousel-indicators {
+        right: 40px;
+    }
+
+        #myCarousel > ol.carousel-indicators > li {
+            background-color: transparent;
+            border: thin solid #C7973A;
+        }
+
+            #myCarousel > ol.carousel-indicators > li.active {
+                background-color: #C7973A;
+            }
+
+    #myCarousel > .carousel-control {
+        top: 80px;
+        color: #C7973A;
+        border: 3px solid #C7973A;
+    }
+
+    #myCarousel > .carousel-inner > .item {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+        #myCarousel > .carousel-inner > .item > img {
+            margin: auto;
+            max-width: 400px;
+            /*height:150px;*/
+        }
+
+
+/* Thumbnails */
+
+ul.thumbnails > li > a.thumbnail > img {
+    height: 200px;
+}
