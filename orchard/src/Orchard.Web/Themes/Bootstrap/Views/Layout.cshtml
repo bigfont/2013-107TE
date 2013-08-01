@@ -118,13 +118,13 @@
             }
             <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                 @if (Model.AsideFirst != null) {
-                    <aside class="span3">
+                    <aside class="span6 span3_old">
                         <div class="well">
                             @Zone(Model.AsideFirst)&nbsp;
                         </div>
                     </aside>
                 }
-                <div class="@(HasText(asideClass) ? asideClass == "aside-1" || asideClass == "aside-2" ? "span9" : asideClass == "aside-12" ? "span6" : "span12" : "span12")">
+                <div class="@(HasText(asideClass) ? asideClass == "aside-1" || asideClass == "aside-2" ? "span6 span9_old" : asideClass == "aside-12" ? "span6" : "span12" : "span12")">
                     @if (Model.Messages != null) {
                         @Zone(Model.Messages)
                     }
@@ -139,7 +139,7 @@
                     }
                 </div>
                 @if (Model.AsideSecond != null) {
-                    <aside class="span3">
+                    <aside class="span6 span3_old">
                         <div class="well">
                             @Zone(Model.AsideSecond)&nbsp;
                         </div>
