@@ -219,7 +219,7 @@ section#content h1 {
 }
 
 .navbar-fixed-top + section#content {
-    padding-top: 45px;
+    padding-top: 40px;
 }
 
 
@@ -231,17 +231,19 @@ section#content > div.container-fluid div.zone > article {
 }
 
 section#content > div.container-fluid div.zone-featured {
-    height: 200px;
+    height: 150px; /* Sum of the stacked line heights and padding. */
     position: relative;
 }
 
     section#content > div.container-fluid div.zone-featured > article.widget-featured {
         background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/titlegradient.PNG);
-        background-position: bottom;
+        background-position: top;
         background-repeat: repeat-x;
         bottom: 0;
         font-family: Arial;
         margin-right: -512px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         position: absolute;
         right: 50%;
         text-align: center;
@@ -249,29 +251,35 @@ section#content > div.container-fluid div.zone-featured {
     }
 
         section#content > div.container-fluid div.zone-featured > article.widget-featured * {
-            /*margin-top: 0;
-                margin-bottom: 0;*/
+            margin-top: 0;
+            margin-bottom: 0;
+            display: block;
         }
 
         section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 {
             color: white;
             font-size: 40px;
+            line-height: 40px;
         }
 
             section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 > em {
                 color: #FFCC99;
                 font-size: 54px;
                 font-style: normal;
+                line-height: 54px;
             }
 
         section#content > div.container-fluid div.zone-featured > article.widget-featured > p {
-            font-size: 20px;
             color: white;
+            font-size: 20px;
+            line-height: 20px;
+            margin-botton: 4px;
         }
 
         section#content > div.container-fluid div.zone-featured > article.widget-featured > h2 {
-            font-size: 16px;
             color: white;
+            font-size: 16px;
+            line-height: 16px;
         }
 
 
@@ -281,17 +289,13 @@ section#content > div.container-fluid div.well > div.zone-aside-first {
 }
 
     section#content > div.container-fluid div.well > div.zone-aside-first > article > p > img {
-        border: thick solid black;
-        background-color: #A5A5BA;
-        padding: 10px;
+        border: thick solid #CEA272;
+        background-color: white;
+        padding: 5px;
         margin-top: 20px;
     }
 
 section#content > div.container-fluid div.zone-content {
-    border: thin solid;
-    border-color: #CC9933;
-    border-bottom: none;
-    border-top: none;
 }
 
 section#content > div.container-fluid div.zone-after-main > article.widget-sticky-footer {
@@ -314,22 +318,47 @@ footer#footer {
 
 /* Carousel */
 #myCarousel {
-    margin-top:80px;
+    margin-top: 80px;
 }
 
     #myCarousel > .carousel-inner {
+        background: black;
+        border: thin solid #C7973A;
     }
 
-        #myCarousel > .carousel-inner > .item {
-            background:black;
-            height: 300px;
+    #myCarousel > ol.carousel-indicators {
+        right: 40px;
+    }
+
+        #myCarousel > ol.carousel-indicators > li {
+            background-color: transparent;
+            border: thin solid #C7973A;
+        }
+
+            #myCarousel > ol.carousel-indicators > li.active {
+                background-color: #C7973A;
+            }
+
+    #myCarousel > .carousel-control {
+        top: 80px;
+        color: #C7973A;
+        border: 3px solid #C7973A;
+    }
+
+    #myCarousel > .carousel-inner > .item {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+        #myCarousel > .carousel-inner > .item > img {
+            margin: auto;
+            max-width: 400px;
+            /*height:150px;*/
         }
 
 
 /* Thumbnails */
 
 ul.thumbnails > li > a.thumbnail > img {
-
-    height:200px;
-
+    height: 200px;
 }
