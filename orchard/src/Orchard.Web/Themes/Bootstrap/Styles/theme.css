@@ -188,17 +188,22 @@
 
 * {
     background-color: transparent;
-    border-color: #CC9933;
+}
+
+.well {
+    /* override united.css*/
+    background-color: transparent;
+    border: none;
 }
 
 html {
-    background-color: #D7E3FB;
+    background-color: #A5A5BA;
 }
 
 body {
     background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/homepage-background-section.JPG);
-    background-repeat: repeat-y;
-    background-position:0 40px;
+    background-repeat: repeat;
+    background-position: 0 40px;
     color: white;
     display: table; /* for full height of its content */
     margin: auto;
@@ -213,78 +218,94 @@ section#content h1 {
     margin-bottom: 0;*/
 }
 
-section#content {
+.navbar-fixed-top + section#content {
+    padding-top: 45px;
 }
 
 
-    section#content > div.container-fluid div.zone > article {
-        margin-left: 20px;
-        margin-right: 20px;
-        /*padding-left: 20px;
+section#content > div.container-fluid div.zone > article {
+    margin-left: 20px;
+    margin-right: 20px;
+    /*padding-left: 20px;
         padding-right: 20px;*/
-    }
+}
 
-    section#content > div.container-fluid div.zone-featured {
-        height: 200px;
+section#content > div.container-fluid div.zone-featured {
+    height: 200px;
+    position: relative;
+}
+
+    section#content > div.container-fluid div.zone-featured > article.widget-featured {
         background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/titlegradient.PNG);
         background-position: bottom;
         background-repeat: repeat-x;
-        position: relative;
+        bottom: 0;
+        font-family: Arial;
+        margin-right: -512px;
+        position: absolute;
+        right: 50%;
+        text-align: center;
+        width: 1024px;
     }
 
-        section#content > div.container-fluid div.zone-featured > article.widget-featured {
-            font-family: Arial;
-            position: absolute;
-            bottom: 0;
-            right: 50%;
-            margin-right: -200px;
-            text-align: center;
+        section#content > div.container-fluid div.zone-featured > article.widget-featured * {
+            /*margin-top: 0;
+                margin-bottom: 0;*/
         }
 
-            section#content > div.container-fluid div.zone-featured > article.widget-featured * {
-                /*margin-top: 0;
-                margin-bottom: 0;*/
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 {
+            color: white;
+            font-size: 40px;
+        }
+
+            section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 > em {
+                color: #FFCC99;
+                font-size: 54px;
+                font-style: normal;
             }
 
-            section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 {
-                color: white;
-                font-size: 40px;
-            }
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > p {
+            font-size: 20px;
+            color: white;
+        }
 
-                section#content > div.container-fluid div.zone-featured > article.widget-featured > h1 > em {
-                    color: #FFCC99;
-                    font-size: 54px;
-                    font-style: normal;
-                }
+        section#content > div.container-fluid div.zone-featured > article.widget-featured > h2 {
+            font-size: 16px;
+            color: white;
+        }
 
-            section#content > div.container-fluid div.zone-featured > article.widget-featured > p {
-                font-size: 20px;
-                color: white;
-            }
 
-            section#content > div.container-fluid div.zone-featured > article.widget-featured > h2 {
-                font-size: 16px;
-                color: white;
-            }
+section#content > div.container-fluid div.well > div.zone-aside-first {
+    background-color: transparent;
+    min-height: 600px;
+}
 
-    section#content > div.container-fluid div.zone-content {
-        border: thin solid;
-        border-color: #CC9933;
-        border-bottom: none;
+    section#content > div.container-fluid div.well > div.zone-aside-first > article > p > img {
+        border: thick solid black;
+        background-color: #A5A5BA;
+        padding: 10px;
+        margin-top: 20px;
     }
 
-    section#content > div.container-fluid div.zone-after-main {
-        background-color:transparent;
-        background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
-        background-repeat: no-repeat;
-        background-position:center bottom;
-        bottom: 0px;
-        height: 200px;   
-        right:50%;
-        margin-right:-512px;
-        position: fixed;
-        width:1024px;
-    }
+section#content > div.container-fluid div.zone-content {
+    border: thin solid;
+    border-color: #CC9933;
+    border-bottom: none;
+    border-top: none;
+}
+
+section#content > div.container-fluid div.zone-after-main {
+    background-color: transparent;
+    background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    bottom: 0px;
+    height: 200px;
+    right: 50%;
+    margin-right: -512px;
+    position: fixed;
+    width: 1024px;
+}
 
 footer#footer {
 }
