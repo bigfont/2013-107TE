@@ -294,7 +294,7 @@ section#content > div.container-fluid div.zone-content {
     border-top: none;
 }
 
-section#content > div.container-fluid div.zone-after-main {
+section#content > div.container-fluid div.zone-after-main > article.widget-sticky-footer {
     background-color: transparent;
     background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
     background-repeat: no-repeat;
@@ -308,4 +308,28 @@ section#content > div.container-fluid div.zone-after-main {
 }
 
 footer#footer {
+}
+
+
+
+/* Carousel */
+#myCarousel {
+    margin-top:80px;
+}
+
+    #myCarousel > .carousel-inner {
+    }
+
+        #myCarousel > .carousel-inner > .item {
+            background:black;
+            height: 300px;
+        }
+
+
+/* Thumbnails */
+
+ul.thumbnails > li > a.thumbnail > img {
+
+    height:200px;
+
 }
