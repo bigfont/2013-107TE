@@ -192,13 +192,17 @@
 }
 
 html {
+    background-color: #D7E3FB;
 }
 
 body {
     background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/homepage-background-section.JPG);
+    background-repeat: repeat-y;
+    background-position:0 40px;
     color: white;
+    display: table; /* for full height of its content */
     margin: auto;
-    max-width: 1024px;
+    width: 1024px;
 }
 
 section#content div,
@@ -213,11 +217,11 @@ section#content {
 }
 
 
-    section#content > div.container-fluid div.zone {
-        /*margin-left: -20px;
-        margin-right: -20px;*/
-        padding-left: 20px;
-        padding-right: 20px;
+    section#content > div.container-fluid div.zone > article {
+        margin-left: 20px;
+        margin-right: 20px;
+        /*padding-left: 20px;
+        padding-right: 20px;*/
     }
 
     section#content > div.container-fluid div.zone-featured {
@@ -231,11 +235,10 @@ section#content {
         section#content > div.container-fluid div.zone-featured > article.widget-featured {
             font-family: Arial;
             position: absolute;
-            bottom: 0;    
-            right:50%;
-            margin-right:-200px;        
+            bottom: 0;
+            right: 50%;
+            margin-right: -200px;
             text-align: center;
-            width:400px;
         }
 
             section#content > div.container-fluid div.zone-featured > article.widget-featured * {
@@ -268,6 +271,19 @@ section#content {
         border: thin solid;
         border-color: #CC9933;
         border-bottom: none;
+    }
+
+    section#content > div.container-fluid div.zone-after-main {
+        background-color:transparent;
+        background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
+        background-repeat: no-repeat;
+        background-position:center bottom;
+        bottom: 0px;
+        height: 200px;   
+        right:50%;
+        margin-right:-512px;
+        position: fixed;
+        width:1024px;
     }
 
 footer#footer {
