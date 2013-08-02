@@ -207,7 +207,7 @@ body {
     color: white;
     display: table; /* for full height of its content */
     margin: auto;
-    width: 1024px;
+    /*width: 1024px;*/
 }
 
 section#content div,
@@ -241,13 +241,13 @@ section#content > div.container-fluid div.zone-featured {
         background-repeat: repeat-x;
         bottom: 0;
         font-family: Arial;
-        margin-right: -512px;
+        /*margin-right: -512px;*/
         padding-top: 10px;
         padding-bottom: 10px;
         position: absolute;
-        right: 50%;
+        /*right: 50%;*/
         text-align: center;
-        width: 1024px;
+        /*width: 1024px;*/
     }
 
         section#content > div.container-fluid div.zone-featured > article.widget-featured * {
@@ -308,7 +308,7 @@ section#content > div.container-fluid div.zone-after-main > article.widget-stick
     right: 50%;
     margin-right: -512px;
     position: fixed;
-    width: 1024px;
+    /*width: 1024px;*/
 }
 
 footer#footer {
