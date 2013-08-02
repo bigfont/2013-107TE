@@ -213,10 +213,7 @@ div.zone {
     background-color: transparent;
 }
 
-div.zone-featured,
-div.zone-after-main {
-    margin-left: -20px;
-    margin-right: -20px;
+div.zone-featured {
 }
 
     div.zone-featured > article.widget-featured {
@@ -253,24 +250,18 @@ div.zone-after-main {
             line-height: 16px;
         }
 
-div.well {
-    /* zone aside first is the first child of a well */
-    margin: 0;
-    margin-top: 80px;
-    padding: 0;
-    padding: 2px;
+
+/* The .zone-aside-* elements are first children of a .well element. */
+/* The following styles apply to .zone-aside-first AND .zone-aside-second */
+div.well > div.zone {
 }
 
-    /* The could be zone-aside-first or zone-aside-second */
-    div.well > div.zone {
-    }
-
-    div.well > div > article > p {
+    div.well > div.zone > article > p {
         margin: 0;
         padding: 0;
     }
 
-        div.well > div > article > p > img {
+        div.well > div.zone > article > p > img {
             width: 100%;
         }
 
@@ -279,30 +270,39 @@ div .zone-content; {
 }
 
 div.zone-after-main {
-    position: fixed;
-    background-color:black;
-    height:15.5px;
-    bottom: 0px;
-    width: 100%;
 }
 
     div.zone-after-main > article.widget-sticky-footer {
         background-color: transparent;
         background-image: url(../../../Media/Default/cssimgs/footer.PNG);
         background-repeat: no-repeat;
-        background-position: center bottom;
-
-        position:absolute;
-        bottom:0;
-        width:100%;
-        height:200px;
-
+        background-position: center bottom -15px;
+        border-bottom: 15px solid black;
+        bottom: 0px;
+        height: 200px;
+        position: fixed;
+        width: 100%;
     }
 
 #myCarousel {
-    /*background: black;*/
     margin: 0;
+    margin-top:40px;
 }
+
+    #myCarousel.affix-top {
+    }
+
+    #myCarousel.affix {
+        /*
+         * The data-offset is 220.
+         * Test using the Firebug Console with window.scroll(0, 221); 
+         */
+        top: 59px;
+        width: 47.5%;
+    }
+
+    #myCarousel.affix-bottom {
+    }
 
     #myCarousel > .carousel-inner {
         margin: auto;
@@ -367,9 +367,17 @@ ul.thumbnails > li > a.thumbnail > img {
 /* Misc */
 
 div.well {
-    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
     background-color: transparent;
     border: none;
+    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
+    margin: 0;
+    padding: 0;
+}
+
+article.widget-featured,
+article.widget-sticky-footer {
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 
