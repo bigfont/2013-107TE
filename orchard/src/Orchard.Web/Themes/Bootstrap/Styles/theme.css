@@ -202,8 +202,6 @@ body {
     background-repeat: repeat;
     background-position: 0 40px;
     display: table; /* shrinkwrap to ensure it grows to the height of its content */
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .navbar-fixed-top + section#content {
