@@ -213,8 +213,8 @@ div.zone {
 }
 
 div.zone-featured {
-    margin-left:20px;
-    margin-right:20px;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
     div.zone-featured > article.widget-featured {
@@ -254,14 +254,12 @@ div.zone-featured {
 div.well {
     /* zone aside first is the first child of a well */
     margin: 0;
-    margin-top:20px;
+    margin-top: 80px;
     padding: 0;
-    padding:2px;
-    line-height:0; /* Remove the annoying margin at the bottom. */
+    padding: 2px;
 }
 
     div.well > div.zone-aside-first {
-
     }
 
         div.well > div.zone-aside-first > article > p {
@@ -270,7 +268,7 @@ div.well {
         }
 
             div.well > div.zone-aside-first > article > p > img {
-                width:100%;
+                width: 100%;
             }
 
 div .zone-content; {
@@ -292,21 +290,37 @@ div.zone-after-main {
     }
 
 #myCarousel {
-    margin-top: 80px;
+    background: black;
+    margin: 0;
 }
 
     #myCarousel > .carousel-inner {
-        background: black;
-        border: thin solid #C7973A;
+        margin:auto;
+        padding:20px;
+        max-width: 350px;
+        border-left: thin solid #C7973A;
+        border-right: thin solid  #C7973A;
     }
 
     #myCarousel > ol.carousel-indicators {
-        right: 40px;
+        height: 60px;
+        position: absolute;
+        width: 350px;
+        right: 50%;
+        margin-right: -175px;
     }
 
         #myCarousel > ol.carousel-indicators > li {
             background-color: transparent;
             border: thin solid #C7973A;
+            border-top-left-radius: 12.5px;
+            border-top-right-radius: 12.5px;
+            border-bottom-left-radius: 12.5px;
+            border-bottom-right-radius: 12.5px;
+            float: right;
+            height: 26px;
+            margin: 2px 3px;
+            width: 26px;
         }
 
             #myCarousel > ol.carousel-indicators > li.active {
@@ -314,25 +328,40 @@ div.zone-after-main {
             }
 
     #myCarousel > .carousel-control {
-        top: 80px;
+        top: 140px;
         color: #C7973A;
         border: 3px solid #C7973A;
     }
 
+        #myCarousel > .carousel-control.left {
+        }
+
+        #myCarousel > .carousel-control.right {
+        }
+
     #myCarousel > .carousel-inner > .item {
-        margin-top: 40px;
-        margin-bottom: 20px;
+        padding-top: 90px; /* make space for the carousel-indicators */
+        margin-bottom: 2.5px;
     }
 
         #myCarousel > .carousel-inner > .item > img {
             margin: auto;
-            max-width: 400px;
-            /*height:150px;*/
+            max-width: 350px;
         }
 
 ul.thumbnails > li > a.thumbnail > img {
     height: 200px;
 }
+
+/* Misc */
+
+div.well {
+    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
+    border-color:#A5A5BA;
+    background-color:#C7973A;
+}
+
+
 
 /* BIGFONT RESPONSIVE OVERRIDES 
 ================================================== */
