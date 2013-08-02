@@ -1,0 +1,1 @@
+These result locally from doing "build Precompiled" or via FTP by downloading the entire contents of wwwroot.
