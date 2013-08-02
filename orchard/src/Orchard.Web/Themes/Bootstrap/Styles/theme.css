@@ -202,6 +202,7 @@ body {
     background-repeat: repeat;
     background-position: 0 40px;
     display: table; /* shrinkwrap to ensure it grows to the height of its content */
+    width: 100%;
 }
 
 .navbar-fixed-top + section#content {
@@ -259,17 +260,18 @@ div.well {
     padding: 2px;
 }
 
-    div.well > div.zone-aside-first {
+    /* The could be zone-aside-first or zone-aside-second */
+    div.well > div.zone {
     }
 
-        div.well > div.zone-aside-first > article > p {
-            margin: 0;
-            padding: 0;
-        }
+    div.well > div > article > p {
+        margin: 0;
+        padding: 0;
+    }
 
-            div.well > div.zone-aside-first > article > p > img {
-                width: 100%;
-            }
+        div.well > div > article > p > img {
+            width: 100%;
+        }
 
 div .zone-content; {
     /* Add styles here. */
@@ -290,16 +292,14 @@ div.zone-after-main {
     }
 
 #myCarousel {
-    background: black;
+    /*background: black;*/
     margin: 0;
 }
 
     #myCarousel > .carousel-inner {
-        margin:auto;
-        padding:20px;
+        margin: auto;
         max-width: 350px;
-        border-left: thin solid #C7973A;
-        border-right: thin solid  #C7973A;
+        /*border: thin solid #C7973A;*/
     }
 
     #myCarousel > ol.carousel-indicators {
@@ -334,31 +334,34 @@ div.zone-after-main {
     }
 
         #myCarousel > .carousel-control.left {
+            left: 100px;
         }
 
         #myCarousel > .carousel-control.right {
+            right: 100px;
         }
 
     #myCarousel > .carousel-inner > .item {
-        padding-top: 90px; /* make space for the carousel-indicators */
+        padding-top: 110px; /* make space for the carousel-indicators */
         margin-bottom: 2.5px;
     }
 
         #myCarousel > .carousel-inner > .item > img {
             margin: auto;
-            max-width: 350px;
+            max-width: 340px;
+            border: 3px solid #C7973A;
+            padding:2px;
         }
 
 ul.thumbnails > li > a.thumbnail > img {
-    height: 200px;
 }
 
 /* Misc */
 
 div.well {
     line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
-    border-color:#A5A5BA;
-    background-color:#C7973A;
+    background-color: transparent;
+    border: none;
 }
 
 
