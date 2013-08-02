@@ -213,7 +213,8 @@ div.zone {
 }
 
 div.zone-featured {
-    /*Add styles here*/
+    margin-left:20px;
+    margin-right:20px;
 }
 
     div.zone-featured > article.widget-featured {
