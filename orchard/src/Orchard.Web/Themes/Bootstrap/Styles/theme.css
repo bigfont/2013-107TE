@@ -201,7 +201,7 @@ html {
 }
 
 body {
-    background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/homepage-background-section.JPG);
+    background-image: url(Media/Default/cssimgs/homepage-background-section.JPG);
     background-repeat: repeat;
     background-position: 0 40px;
     color: white;
@@ -236,7 +236,7 @@ section#content > div.container-fluid div.zone-featured {
 }
 
     section#content > div.container-fluid div.zone-featured > article.widget-featured {
-        background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/titlegradient.PNG);
+        background-image: url(Media/Default/cssimgs/titlegradient.PNG);
         background-position: top;
         background-repeat: repeat-x;
         bottom: 0;
@@ -300,7 +300,7 @@ section#content > div.container-fluid div.zone-content {
 
 section#content > div.container-fluid div.zone-after-main > article.widget-sticky-footer {
     background-color: transparent;
-    background-image: url(http://localhost:30321/OrchardLocal/Media/Default/cssimgs/footer.PNG);
+    background-image: url(Media/Default/cssimgs/footer.PNG);
     background-repeat: no-repeat;
     background-position: center bottom;
     bottom: 0px;
