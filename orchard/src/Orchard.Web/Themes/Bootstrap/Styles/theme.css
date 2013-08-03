@@ -262,6 +262,12 @@ div.well > div.zone {
     }
 
         div.well > div.zone > article > p > img {
+            border: 3px solid #78160E;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            margin-top: 20px;
             width: 100%;
         }
 
@@ -286,7 +292,7 @@ div.zone-after-main {
 
 #myCarousel {
     margin: 0;
-    margin-top:40px;
+    margin-top: 40px;
 }
 
     #myCarousel.affix-top {
