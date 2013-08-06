@@ -75,6 +75,7 @@ div.well > div.zone {
 
 #myCarousel {
     margin: 0;
+    margin-top: 20px;
 
     &.affix-top {
         /*Add styles here */
@@ -93,22 +94,35 @@ div.well > div.zone {
         /*Add styles here */
     }
 
-    > .carousel-inner {
+    div.carousel-inner {
         margin: auto;
-        max-width: 350px;
-        /*border: thin solid #C7973A;*/
+
+        div.item {
+            background: white;
+            border: 2.5px solid #A97727;
+            margin: auto;
+            width: 350px;
+            padding: 10px;
+
+            img {
+                border: thin solid black;
+                background: #A97727;
+                margin: auto;
+                padding: 1px;
+                width: 340px;
+            }
+        }
     }
 
-    > ol.carousel-indicators {
-        display: none;
+    ol.carousel-indicators {
+        display: none; // they look nasty
     }
 
-    > .carousel-control {
-        top: 120px;
-        color: #C7973A;
+    a.carousel-control {
+        top: 25px;
+        color: white;
         border: 3px solid #C7973A;
-        z-index: 10;
-
+        z-index: 10; // to ensure they're on top of background images
         &.left {
             left: 0px;
         }
@@ -117,27 +131,11 @@ div.well > div.zone {
             right: 0px;
         }
     }
-
-
-
-    > .carousel-inner {
-        padding-top: 40px; /* make space for the carousel-indicators */
-        margin-bottom: 2.5px;
-
-        > .item > img {
-            margin: auto;
-            max-width: 340px;
-            border: 3px solid #C7973A;
-            padding: 2px;
-        }
-    }
 }
 
 ul.thumbnails > li > a.thumbnail > img {
 }
-
 /* Misc */
-
 div.well {
     background-color: transparent;
     border: none;

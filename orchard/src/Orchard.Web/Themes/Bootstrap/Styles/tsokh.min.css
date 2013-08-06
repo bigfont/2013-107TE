@@ -862,13 +862,12 @@ div.zone.zone-featured>article.widget-featured>p{color:white;font-size:20px;line
 div.zone.zone-featured>article.widget-featured>h2{color:white;font-size:16px;line-height:16px;}
 div.zone.zone-after-main>article.widget-sticky-footer{background-color:transparent;background-image:url(../../../Media/Default/cssimgs/footer.PNG);background-repeat:no-repeat;background-position:center bottom -15px;border-bottom:15px solid black;bottom:0px;height:200px;position:fixed;width:100%;}
 div.well>div.zone>article>p{margin:0;padding:0;}div.well>div.zone>article>p>img{border:3px solid #78160E;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-left-radius:25px;border-top-right-radius:25px;margin-top:20px;width:100%;}
-#myCarousel{margin:0;}
+#myCarousel{margin:0;margin-top:20px;}#myCarousel.affix-top{}
 #myCarousel.affix{top:29px;width:47.5%;}
 #myCarousel.affix-bottom{}
-#myCarousel>.carousel-inner{margin:auto;max-width:350px;}
-#myCarousel>ol.carousel-indicators{display:none;}
-#myCarousel>.carousel-control{top:120px;color:#C7973A;border:3px solid #C7973A;z-index:10;}#myCarousel>.carousel-control.left{left:0px;}
-#myCarousel>.carousel-control.right{right:0px;}
-#myCarousel>.carousel-inner{padding-top:40px;margin-bottom:2.5px;}#myCarousel>.carousel-inner>.item>img{margin:auto;max-width:340px;border:3px solid #C7973A;padding:2px;}
+#myCarousel div.carousel-inner{margin:auto;}#myCarousel div.carousel-inner div.item{background:white;border:2.5px solid #A97727;margin:auto;width:350px;padding:10px;}#myCarousel div.carousel-inner div.item img{border:thin solid black;background:#A97727;margin:auto;padding:1px;width:340px;}
+#myCarousel ol.carousel-indicators{display:none;}
+#myCarousel a.carousel-control{top:25px;color:white;border:3px solid #C7973A;z-index:10;}#myCarousel a.carousel-control.left{left:0px;}
+#myCarousel a.carousel-control.right{right:0px;}
 div.well{background-color:transparent;border:none;line-height:0;margin:0;padding:0;}
 article.widget-featured,article.widget-sticky-footer{margin-left:-20px;margin-right:-20px;}
