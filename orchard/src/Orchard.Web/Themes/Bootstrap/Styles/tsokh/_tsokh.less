@@ -2,59 +2,60 @@
     background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
     background-repeat: repeat;
     background-position: 0 40px;
-    margin-top:@navbarHeight;
+    margin-top: @navbarHeight;
 }
 
 div.zone {
     background-color: transparent;
+}
 
-    &.zone-featured {
-        > article.widget-featured {
-            #gradient.vertical(#CC9933, #490E03);
-            background-position: top;
-            background-repeat: repeat-x;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
+div.zone-featured {
+    > article.widget-featured {
+        #gradient.vertical(#CC9933, #490E03);
+        background-position: top;
+        background-repeat: repeat-x;
+        border-bottom:solid thin #490E03;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
 
-            > h1 {
-                color: white;
-                font-size: 40px;
-                line-height: 40px;
+        > h1 {
+            color: white;
+            font-size: 40px;
+            line-height: 40px;
 
-                > em {
-                    color: #FFCC99;
-                    font-size: 54px;
-                    font-style: normal;
-                    line-height: 54px;
-                }
-            }
-
-            > p {
-                color: white;
-                font-size: 20px;
-                line-height: 20px;
-            }
-
-            > h2 {
-                color: white;
-                font-size: 16px;
-                line-height: 16px;
+            > em {
+                color: #FFCC99;
+                font-size: 54px;
+                font-style: normal;
+                line-height: 54px;
             }
         }
-    }
 
-    &.zone-after-main > article.widget-sticky-footer {
-        background-color: transparent;
-        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
-        background-repeat: no-repeat;
-        background-position: center bottom -15px;
-        border-bottom: 15px solid black;
-        bottom: 0px;
-        height: 200px;
-        position: fixed;
-        width: 100%;
+        > p {
+            color: white;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        > h2 {
+            color: white;
+            font-size: 16px;
+            line-height: 16px;
+        }
     }
+}
+
+div.zone-after-main > article.widget-sticky-footer {
+    background-color: transparent;
+    background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+    background-repeat: no-repeat;
+    background-position: center bottom -15px;
+    border-bottom: 15px solid black;
+    bottom: 0px;
+    height: 200px;
+    position: fixed;
+    width: 100%;
 }
 
 div.well > div.zone {
@@ -65,7 +66,7 @@ div.well > div.zone {
         > img {
             .box-shadow(0 0 5px 5px #A1A2B9);
             margin-top: 20px;
-            padding:5px;            
+            padding: 5px;
             width: 100%;
         }
     }
