@@ -320,6 +320,7 @@ div.zone-after-main {
         top: 120px;
         color: #C7973A;
         border: 3px solid #C7973A;
+        z-index:10;
     }
 
         #myCarousel > .carousel-control.left {
