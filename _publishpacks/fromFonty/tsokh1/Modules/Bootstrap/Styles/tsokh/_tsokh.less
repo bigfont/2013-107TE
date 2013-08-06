@@ -1,0 +1,151 @@
+﻿body {
+    background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
+    background-repeat: repeat;
+    background-position: 0 40px;
+    margin-top: @navbarHeight;
+}
+
+div.zone {
+    background-color: transparent;
+}
+
+div.zone-featured {
+    > article.widget-featured {
+        #gradient.vertical(#CC9933, #490E03);
+        background-position: top;
+        background-repeat: repeat-x;
+        border-bottom: solid thin #490E03;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+
+        > h1 {
+            color: white;
+            font-size: 40px;
+            line-height: 40px;
+
+            > em {
+                color: #FFCC99;
+                font-size: 54px;
+                font-style: normal;
+                line-height: 54px;
+            }
+        }
+
+        > p {
+            color: white;
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        > h2 {
+            color: white;
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}
+
+div.zone-after-main > article.widget-sticky-footer {
+    background-color: transparent;
+    background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+    background-repeat: no-repeat;
+    background-position: center bottom -15px;
+    border-bottom: 15px solid black;
+    bottom: 0px;
+    height: 200px;
+    position: fixed;
+    width: 100%;
+}
+
+div.well > div.zone {
+    > article > p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        > img {
+            .box-shadow(0 0 5px 5px #A1A2B9);
+            margin: auto;
+            margin-top: 20px;
+            width: 95%;
+        }
+    }
+}
+
+#myCarousel {
+    margin: 0;
+    margin-top: 20px;
+
+    &.affix-top {
+        /*Add styles here */
+    }
+
+    &.affix {
+        /*
+         * The data-offset is 220.
+         * Test using the Firebug Console with window.scroll(0, 221); 
+         */
+        top: 39px;
+        width: 47.5%;
+    }
+
+    &.affix-bottom {
+        /*Add styles here */
+    }
+
+    div.carousel-inner {
+        margin: auto;
+
+        div.item {
+            background: white;
+            border: 2.5px solid #A97727;
+            margin: auto;
+            width: 350px;
+            padding: 10px;
+
+            img {
+                border: thin solid black;
+                background: #A97727;
+                margin: auto;
+                padding: 1px;
+                width: 340px;
+            }
+        }
+    }
+
+    ol.carousel-indicators {
+        display: none; // they look nasty
+    }
+
+    a.carousel-control {
+        top: 25px;
+        color: white;
+        border: 3px solid #C7973A;
+        z-index: 10; // to ensure they're on top of background images
+        &.left {
+            left: 0px;
+        }
+
+        &.right {
+            right: 0px;
+        }
+    }
+}
+
+ul.thumbnails > li > a.thumbnail > img {
+}
+/* Misc */
+div.well {
+    background-color: transparent;
+    border: none;
+    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
+    margin: 0;
+    padding: 0;
+}
+
+article.widget-featured,
+article.widget-sticky-footer {
+    margin-left: -20px;
+    margin-right: -20px;
+}
