@@ -187,14 +187,10 @@
 /* BIGFONT OVERRIDES 
 ================================================== */
 
-html {
-    background-color: #A5A5BA;
+html * {
+    color: white;
+    font-family: Arial; /* for now */
 }
-
-    html * {
-        color: white;
-        font-family: Arial; /* for now */
-    }
 
 
 body {
@@ -317,7 +313,7 @@ div.zone-after-main {
     }
 
     #myCarousel > ol.carousel-indicators {
-        display:none;
+        display: none;
     }
 
     #myCarousel > .carousel-control {
