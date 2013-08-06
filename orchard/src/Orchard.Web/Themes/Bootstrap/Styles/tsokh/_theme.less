@@ -1,0 +1,192 @@
+body {
+    background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
+    background-repeat: repeat;
+    background-position: 0 40px;
+    display: table; /* shrinkwrap to ensure it grows to the height of its content */
+    width: 100%;
+}
+
+div.zone {
+    background-color: transparent;
+
+    &.zone-featured {
+        > article.widget-featured {
+            background-image: url(../../../Media/Default/cssimgs/titlegradient.PNG);
+            background-position: top;
+            background-repeat: repeat-x;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+
+            > h1 {
+                color: white;
+                font-size: 40px;
+                line-height: 40px;
+
+                > em {
+                    color: #FFCC99;
+                    font-size: 54px;
+                    font-style: normal;
+                    line-height: 54px;
+                }
+            }
+
+            > p {
+                color: white;
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            > h2 {
+                color: white;
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    &.zone-after-main > article.widget-sticky-footer {
+        background-color: transparent;
+        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+        background-repeat: no-repeat;
+        background-position: center bottom -15px;
+        border-bottom: 15px solid black;
+        bottom: 0px;
+        height: 200px;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+div.well > div.zone {
+    > article > p {
+        margin: 0;
+        padding: 0;
+
+        > img {
+            /*border: 3px solid #78160E;
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            margin-top: 20px;
+            width: 100%;*/
+        }
+    }
+}
+
+#myCarousel {
+    margin: 0;
+
+    &.affix-top {
+    }
+
+    &.affix {
+        /*
+         * The data-offset is 220.
+         * Test using the Firebug Console with window.scroll(0, 221); 
+         */
+        top: 29px;
+        width: 47.5%;
+    }
+
+    &.affix-bottom {
+        /*Add styles here */
+    }
+
+    > .carousel-inner {
+        margin: auto;
+        max-width: 350px;
+        /*border: thin solid #C7973A;*/
+    }
+
+    > ol.carousel-indicators {
+        display: none;
+    }
+
+    > .carousel-control {
+        top: 120px;
+        color: #C7973A;
+        border: 3px solid #C7973A;
+        z-index: 10;
+
+        &.left {
+            left: 0px;
+        }
+
+        &.right {
+            right: 0px;
+        }
+    }
+
+
+
+    > .carousel-inner {
+        padding-top: 40px; /* make space for the carousel-indicators */
+        margin-bottom: 2.5px;
+
+        > .item > img {
+            margin: auto;
+            max-width: 340px;
+            border: 3px solid #C7973A;
+            padding: 2px;
+        }
+    }
+}
+
+ul.thumbnails > li > a.thumbnail > img {
+}
+
+/* Misc */
+
+div.well {
+    background-color: transparent;
+    border: none;
+    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
+    margin: 0;
+    padding: 0;
+}
+
+article.widget-featured,
+article.widget-sticky-footer {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+
+
+
+
+/* BIGFONT RESPONSIVE OVERRIDES 
+================================================== */
+
+/* Defaults fall between 980px and 1199px */
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    .navbar-fixed-top + section#content {
+        padding-top: 0;
+    }
+
+    div.zone-featured,
+    div.zone-aside-first,
+    div.zone-after-main {
+        /* Make full-width zones by countering the body's padding. */
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}

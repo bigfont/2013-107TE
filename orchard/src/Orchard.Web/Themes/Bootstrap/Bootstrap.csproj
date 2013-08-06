@@ -282,6 +282,49 @@
   <ItemGroup>
     <Content Include="Views\Parts\Tags.ShowTags.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\tsokh-bootstrap-theme\accordion.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\alerts.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\bootstrap.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\breadcrumbs.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\button-groups.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\buttons.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\carousel.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\close.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\code.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\component-animations.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\dropdowns.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\forms.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\grid.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\hero-unit.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\labels-badges.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\layouts.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\media.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\mixins.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\modals.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\navbar.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\navs.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\pager.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\pagination.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\popovers.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\progress-bars.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\reset.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive-1200px-min.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive-767px-max.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive-768px-979px.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive-navbar.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive-utilities.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\responsive.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\scaffolding.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\sprites.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\tables.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\thumbnails.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\tooltip.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\type.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\utilities.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\variables.less" />
+    <Content Include="Styles\tsokh-bootstrap-theme\wells.less" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
