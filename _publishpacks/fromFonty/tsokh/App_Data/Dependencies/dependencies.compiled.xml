@@ -4,7 +4,7 @@
     <ExtensionId>Bootstrap</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/Bootstrap/bin/Bootstrap.dll</VirtualPath>
-    <Hash>9240a0299fd457ec</Hash>
+    <Hash>9240a55d1e0eb12b</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Lucene</ExtensionId>
@@ -88,7 +88,7 @@
     <ExtensionId>Orchard.DesignerTools</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.DesignerTools/bin/Orchard.DesignerTools.dll</VirtualPath>
-    <Hash>2516e0cd1bc4cfb4</Hash>
+    <Hash>2516e5ffb5ce9774</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Email</ExtensionId>
