@@ -321,23 +321,6 @@ div.zone-after-main {
         display:none;
     }
 
-        #myCarousel > ol.carousel-indicators > li {
-            background-color: transparent;
-            border: thin solid #C7973A;
-            border-top-left-radius: 12.5px;
-            border-top-right-radius: 12.5px;
-            border-bottom-left-radius: 12.5px;
-            border-bottom-right-radius: 12.5px;
-            float: right;
-            height: 26px;
-            margin: 2px 3px;
-            width: 26px;
-        }
-
-            #myCarousel > ol.carousel-indicators > li.active {
-                background-color: #C7973A;
-            }
-
     #myCarousel > .carousel-control {
         top: 0px;
         color: #C7973A;
