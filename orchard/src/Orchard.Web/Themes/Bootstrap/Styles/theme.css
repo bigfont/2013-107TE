@@ -302,7 +302,7 @@ div.zone-after-main {
          * The data-offset is 220.
          * Test using the Firebug Console with window.scroll(0, 221); 
          */
-        top: 59px;
+        top: 29px;
         width: 47.5%;
     }
 
@@ -352,7 +352,7 @@ div.zone-after-main {
         }
 
     #myCarousel > .carousel-inner > .item {
-        padding-top: 110px; /* make space for the carousel-indicators */
+        padding-top: 40px; /* make space for the carousel-indicators */
         margin-bottom: 2.5px;
     }
 
