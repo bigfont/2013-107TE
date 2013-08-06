@@ -292,6 +292,7 @@ div.zone-after-main {
 
 #myCarousel {
     margin: 0;
+    margin-top:40px;
 }
 
     #myCarousel.affix-top {
@@ -338,7 +339,7 @@ div.zone-after-main {
             }
 
     #myCarousel > .carousel-control {
-        top: 140px;
+        top: 0px;
         color: #C7973A;
         border: 3px solid #C7973A;
     }
