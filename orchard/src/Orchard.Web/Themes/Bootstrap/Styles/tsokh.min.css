@@ -862,7 +862,7 @@ div.zone-featured>article.widget-featured{background-color:#986120;background-im
 div.zone-featured>article.widget-featured>p{color:white;font-size:20px;line-height:20px;}
 div.zone-featured>article.widget-featured>h2{color:white;font-size:16px;line-height:16px;}
 div.zone-after-main>article.widget-sticky-footer{background-color:transparent;background-image:url(../../../Media/Default/cssimgs/footer.PNG);background-repeat:no-repeat;background-position:center bottom -15px;border-bottom:15px solid black;bottom:0px;height:200px;position:fixed;width:100%;}
-div.well>div.zone>article>p{margin:0;padding:0;}div.well>div.zone>article>p>img{-webkit-box-shadow:0 0 5px 5px #a1a2b9;-moz-box-shadow:0 0 5px 5px #a1a2b9;box-shadow:0 0 5px 5px #a1a2b9;margin-top:20px;padding:5px;width:100%;}
+div.well>div.zone>article>p{margin:0;padding:0;text-align:center;}div.well>div.zone>article>p>img{-webkit-box-shadow:0 0 5px 5px #a1a2b9;-moz-box-shadow:0 0 5px 5px #a1a2b9;box-shadow:0 0 5px 5px #a1a2b9;margin:auto;margin-top:20px;width:95%;}
 #myCarousel{margin:0;margin-top:20px;}#myCarousel.affix-top{}
 #myCarousel.affix{top:39px;width:47.5%;}
 #myCarousel.affix-bottom{}
