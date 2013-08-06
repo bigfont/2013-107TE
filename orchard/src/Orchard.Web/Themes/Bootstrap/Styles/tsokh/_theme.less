@@ -1,162 +1,184 @@
-body {
-    background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
-    background-repeat: repeat;
-    background-position: 0 40px;
-    display: table; /* shrinkwrap to ensure it grows to the height of its content */
-    width: 100%;
+/* STICKY FOOTER
+================================================== */
+#footer, #push {
+    height: 115px;
 }
 
-div.zone {
-    background-color: transparent;
-
-    &.zone-featured {
-        > article.widget-featured {
-
-            #gradient.vertical(#CC9933, #490E03);
-
-            background-position: top;
-            background-repeat: repeat-x;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
-
-            > h1 {
-                color: white;
-                font-size: 40px;
-                line-height: 40px;
-
-                > em {
-                    color: #FFCC99;
-                    font-size: 54px;
-                    font-style: normal;
-                    line-height: 54px;
-                }
-            }
-
-            > p {
-                color: white;
-                font-size: 20px;
-                line-height: 20px;
-            }
-
-            > h2 {
-                color: white;
-                font-size: 16px;
-                line-height: 16px;
-            }
-        }
-    }
-
-    &.zone-after-main > article.widget-sticky-footer {
-        background-color: transparent;
-        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
-        background-repeat: no-repeat;
-        background-position: center bottom -15px;
-        border-bottom: 15px solid black;
-        bottom: 0px;
-        height: 200px;
-        position: fixed;
-        width: 100%;
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-div.well > div.zone {
-    > article > p {
-        margin: 0;
-        padding: 0;
-
-        > img {
-            /*border: 3px solid #78160E;
-            border-bottom-right-radius: 25px;
-            border-bottom-left-radius: 25px;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            margin-top: 20px;
-            width: 100%;*/
-        }
-    }
+/* BOOTSWATCH ADJUSTMENTS
+================================================== */
+/* Set the top margin on the content Section to 0. Change the top padding to 0 unless using a fixed navbar */
+#content {
+    padding-top: 0;
+    margin-top: 0;
 }
 
-#myCarousel {
+/* remove the bottom margin */
+.subnav {
+    margin-bottom: 0;
+}
+
+.well {
+    padding: 5px 10px;
+}
+
+.widget .page-header {
+    margin: 0 0 5px;
+    padding-bottom: 0;
+}
+
+/* BACK TO TOP
+================================================== */
+#toTop {
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 5px;
+    text-align: center;
+    z-index: 500;
+}
+
+    #toTop:hover {
+        opacity: .7;
+    }
+
+/* FORM ERROR STYLING
+================================================== */
+.input-validation-error {
+    border-color: #bd4247 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075) !important;
+}
+
+.validation-summary-errors, .field-validation-error {
+    font-size: .9em;
+    color: #bd4247;
+}
+
+/* LOGIN/REGISTRATION FORM STYLING
+================================================== */
+/* set size and position of login/registration form */
+.logreg {
+    width: 450px;
+    margin: 40px auto;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+    .logreg .lregister {
+        text-align: center;
+    }
+    /* adjust position/size of login/registration form labels and inputs */
+    .logreg .control-label {
+        width: 80px;
+    }
+
+    .logreg.changepassword .control-label, .logreg.lostpassword .control-label {
+        padding-top: 0;
+    }
+
+    .logreg .controls {
+        margin-left: 100px;
+    }
+
+    .logreg input[type="text"], .logreg .form-horizontal input[type="password"], .logreg .form-horizontal textarea {
+        width: 90%;
+    }
+    /* form action style */
+    .logreg .form-actions {
+        padding: 5px 20px 5px;
+        padding-left: 100px;
+        background: transparent;
+        border-top: 0px;
+    }
+
+/* SEARCH WIDGET STYLING
+================================================== */
+.widget-search-form {
+    float: none !important;
+}
+
+/* TWITTER WIDGET STYLING
+================================================== */
+.latest-twitter-list h5 {
+    display: inline-block;
     margin: 0;
-
-    &.affix-top {
-    }
-
-    &.affix {
-        /*
-         * The data-offset is 220.
-         * Test using the Firebug Console with window.scroll(0, 221); 
-         */
-        top: 29px;
-        width: 47.5%;
-    }
-
-    &.affix-bottom {
-        /*Add styles here */
-    }
-
-    > .carousel-inner {
-        margin: auto;
-        max-width: 350px;
-        /*border: thin solid #C7973A;*/
-    }
-
-    > ol.carousel-indicators {
-        display: none;
-    }
-
-    > .carousel-control {
-        top: 120px;
-        color: #C7973A;
-        border: 3px solid #C7973A;
-        z-index: 10;
-
-        &.left {
-            left: 0px;
-        }
-
-        &.right {
-            right: 0px;
-        }
-    }
-
-
-
-    > .carousel-inner {
-        padding-top: 40px; /* make space for the carousel-indicators */
-        margin-bottom: 2.5px;
-
-        > .item > img {
-            margin: auto;
-            max-width: 340px;
-            border: 3px solid #C7973A;
-            padding: 2px;
-        }
-    }
 }
 
-ul.thumbnails > li > a.thumbnail > img {
+.latest-twitter-list {
+    margin-left: 0;
 }
 
-/* Misc */
-
-div.well {
-    background-color: transparent;
-    border: none;
-    line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
-    margin: 0;
-    padding: 0;
+/* BLOG STYLING
+================================================== */
+/* change padding on wells */
+.meta.well, .metadata.well, .comment.well {
+    padding: 5px;
 }
 
-article.widget-featured,
-article.widget-sticky-footer {
-    margin-left: -20px;
-    margin-right: -20px;
+.tags, .meta {
+    font-size: .9em;
+}
+/* move comment count inline with other meta items */
+.commentcount {
+    margin-top: -20px !important;
+    margin-right: 5px;
+}
+/* remove list style and margin from blog list */
+.search-results.content-items, .blog-posts, .tagged-posts, .comment-list, .archive-trail + ul {
+    list-style: none;
+    margin-left: 0;
+}
+/* reduce size of author & meta and display on same line */
+.comment-author, .cmeta {
+    font-size: .9em;
+    display: inline-block;
+}
+/* create space between meta and comment text */
+.comment p {
+    margin-top: 5px;
+}
+/* add spacing for threaded comments */
+.comment .comment-list {
+    margin: 20px 20px 0;
+}
+/* adjust position/size of comment form labels and inputs */
+.comment-form .control-label {
+    width: 80px;
 }
 
+.comment-form .controls {
+    margin-left: 100px;
+}
 
+.comment-form .comment-text {
+    width: 98%;
+}
 
+/* SHAREBAR STYLING
+================================================== */
+.well .sharebar {
+    padding-top: 12px;
+}
+
+/* PAGER STYLING
+================================================== */
+.pager li > a, .pager li > span {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
 
 
 /* BIGFONT RESPONSIVE OVERRIDES 
@@ -180,15 +202,45 @@ article.widget-sticky-footer {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-    .navbar-fixed-top + section#content {
-        padding-top: 0;
+    #content {
+        margin-top: -20px;
     }
 
-    div.zone-featured,
-    div.zone-aside-first,
-    div.zone-after-main {
-        /* Make full-width zones by countering the body's padding. */
-        margin-left: -20px;
-        margin-right: -20px;
+    img {
+        max-width: 100%;
+    }
+
+    #myCarousel.affix {
+        top:0;
+        position: relative;
+        width:auto;
+    }
+
+    div.zone {
+
+        &.zone-featured {
+            > article.widget-featured {
+
+                > h1 {
+                    font-size: 40px;
+                    line-height: 40px;
+
+                    > em {
+                        font-size: 50px;
+                        line-height: 50px;
+                    }
+                }
+
+                > p {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+
+                > h2 {
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+            }
+        }
     }
 }
