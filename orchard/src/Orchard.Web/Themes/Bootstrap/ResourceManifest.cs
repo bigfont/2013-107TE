@@ -1,12 +1,15 @@
 ﻿using Orchard.UI.Resources;
 
-namespace Bootstrap {
-    public class ResourceManifest : IResourceManifestProvider {
+namespace Bootstrap
+{
+    public class ResourceManifest : IResourceManifestProvider
+    {
         public const string BOOTSWATCH_STYLE = "BOOTSWATCH_STYLE";
         public const string BOOTSTRAP_RESPONSIVE_STYLE = "BOOTSTRAP_RESPONSIVE_STYLE";
         public const string CUSTOM_STYLE = "CUSTOM_STYLE";
 
-        public void BuildManifests(ResourceManifestBuilder builder) {
+        public void BuildManifests(ResourceManifestBuilder builder)
+        {
             var manifest = builder.Add();
 
             // core styles
@@ -29,6 +32,7 @@ namespace Bootstrap {
             manifest.DefineStyle("spruce.min.css").SetUrl("spruce.min.css", "spruce.min.css");
             manifest.DefineStyle("superhero.min.css").SetUrl("superhero.min.css", "superhero.min.css");
             manifest.DefineStyle("united.min.css").SetUrl("united.min.css", "united.min.css");
+            manifest.DefineStyle("tsokh.min.css").SetUrl("tsokh.min.css", "tsokh.min.css");
         }
     }
 }
