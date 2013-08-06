@@ -210,10 +210,29 @@
         max-width: 100%;
     }
 
-    #myCarousel.affix {
-        top:0;
-        position: relative;
-        width:auto;
+    #myCarousel {
+
+        &.affix {
+            top: 0;
+            position: relative;
+            width: auto;
+        }
+
+        div.carousel-inner {
+
+            div.item {
+                width: 330px;
+
+                img {
+                    width: 320px;
+                }
+            }
+        }
+    }
+
+    article.widget-aside-first {
+        margin-right: -20px;
+        margin-left: -20px;
     }
 
     div.zone {
