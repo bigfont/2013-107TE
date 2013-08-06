@@ -308,6 +308,7 @@ div.zone-after-main {
     }
 
     #myCarousel.affix-bottom {
+        /*Add styles here */
     }
 
     #myCarousel > .carousel-inner {
@@ -317,11 +318,7 @@ div.zone-after-main {
     }
 
     #myCarousel > ol.carousel-indicators {
-        height: 60px;
-        position: absolute;
-        width: 350px;
-        right: 50%;
-        margin-right: -175px;
+        display:none;
     }
 
         #myCarousel > ol.carousel-indicators > li {
