@@ -325,7 +325,7 @@
     <Content Include="Styles\tsokh\utilities.less" />
     <Content Include="Styles\tsokh\variables.less" />
     <Content Include="Styles\tsokh\wells.less" />
-    <Content Include="Styles\tsokh\_theme.less" />
+    <Content Include="Styles\tsokh\_tsokh-responsive.less" />
     <Content Include="Styles\tsokh\_tsokh.less" />
   </ItemGroup>
   <PropertyGroup>

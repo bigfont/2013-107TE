@@ -6,19 +6,23 @@ using Orchard.UI.Admin;
 using Orchard.UI.Resources;
 using Bootstrap.Services;
 
-namespace Bootstrap.Filters {
-    public class AlternateCssFilter : FilterProvider, IResultFilter {
+namespace Bootstrap.Filters
+{
+    public class AlternateCssFilter : FilterProvider, IResultFilter
+    {
         private readonly IThemeSettingsService _settingsService;
         private readonly IResourceManager _resourceManager;
         private readonly ISiteThemeService _siteThemeService;
 
-        public AlternateCssFilter(IThemeSettingsService settingsService, IResourceManager resourceManager, ISiteThemeService siteThemeService) {
+        public AlternateCssFilter(IThemeSettingsService settingsService, IResourceManager resourceManager, ISiteThemeService siteThemeService)
+        {
             _settingsService = settingsService;
             _resourceManager = resourceManager;
             _siteThemeService = siteThemeService;
         }
 
-        public void OnResultExecuting(ResultExecutingContext filterContext) {
+        public void OnResultExecuting(ResultExecutingContext filterContext)
+        {
             // ignore filter on admin pages
             if (AdminFilter.IsApplied(filterContext.RequestContext))
                 return;
@@ -32,12 +36,14 @@ namespace Bootstrap.Filters {
                 return;
 
             var themeName = _siteThemeService.GetSiteTheme();
-            if (themeName.Name == Constants.THEME_NAME) {
+            if (themeName.Name == Constants.THEME_NAME)
+            {
                 this.AddCss();
             }
         }
 
-        private void AddCss() {
+        private void AddCss()
+        {
             var settings = _settingsService.GetSettings();
 
             // Add Swatch
@@ -45,7 +51,8 @@ namespace Bootstrap.Filters {
                 _resourceManager.Require("stylesheet", settings.Swatch)
                                 .AtHead();
 
-                System.Web.HttpContext.Current.Items[Constants.ITEM_USE_SWATCH_NAME] = settings.Swatch.ToString();
+            // Save Swatch
+            System.Web.HttpContext.Current.Items[Constants.ITEM_USE_SWATCH_NAME] = settings.Swatch.ToString();
 
             // Add Bootstrap Responsive
             _resourceManager.Require("stylesheet", ResourceManifest.BOOTSTRAP_RESPONSIVE_STYLE)
@@ -60,7 +67,8 @@ namespace Bootstrap.Filters {
                             .AtHead();
         }
 
-        public void OnResultExecuted(ResultExecutedContext filterContext) {
+        public void OnResultExecuted(ResultExecutedContext filterContext)
+        {
         }
     }
 }

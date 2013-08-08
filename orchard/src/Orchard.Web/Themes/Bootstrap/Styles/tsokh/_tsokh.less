@@ -2,6 +2,35 @@
 /* TSOKH SWATCH
 ================================================== */
 
+
+/* VIEWPORT */
+// handle windows phone 8 viewport
+// see also http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport
+
+{
+    width: device-width;
+}
+
+
+
+/* GENERAL LAYOUT */
 body {
     background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
     background-repeat: repeat;
@@ -14,6 +43,9 @@ div.zone {
     background-color: transparent;
 }
 
+
+
+/* ZONE FEATURED */
 div.zone-featured {
     > article.widget-featured {
         #gradient.vertical(#CC9933, #490E03);
@@ -51,30 +83,10 @@ div.zone-featured {
     }
 }
 
-div.zone-after-main {
-    border-bottom: 15px solid black;
-    bottom: 0px;
-    left: 0px;
-    position: fixed;
-    width: 100%;
 
-    > article.widget-sticky-footer {
-        background-color: transparent;
-        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        position: relative;
-        bottom: -15px;
-        height: 200px;
-    }
-}
 
-div.zone-footer {
 
-    margin-bottom:240px;
-
-}
-
+/* ZONE ASIDE */
 div.well > div.zone {
 
     > article {
@@ -165,7 +177,45 @@ div.well > div.zone {
     }
 }
 
-/* Misc */
+
+/* ZONE CONTENT */
+div.zone-content {
+    padding-bottom: 500px;
+    border: thin solid pink;
+}
+
+
+
+/* ZONE AFTER MAIN */
+div.zone-after-main {
+    border-bottom: 15px solid black;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+
+    > article.widget-sticky-footer {
+        background-color: transparent;
+        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        position: relative;
+        bottom: -15px;
+        height: 200px;
+    }
+}
+
+
+
+
+/* ZONE FOOTER */
+div.zone-footer {
+    // to prevent the sticky footer from covering the badge-of-honor
+    margin-bottom: 240px;
+}
+
+
+/* MISC */
 div.well {
     background-color: transparent;
     border: none;
@@ -176,7 +226,8 @@ div.well {
 
 article.widget-featured,
 article.widget-sticky-footer,
-{
+div.zone-after-main {
+    // make some articles full width by countering the body 20px padding.
     margin-left: -20px;
     margin-right: -20px;
 }

@@ -11,4 +11,20 @@
     $("#toTop").click(function () {
         $("body,html").animate({ scrollTop: 0 }, 2e3)
     })
+
+
+
+    if (navigator.userAgent.match(/(MSIE 10.0)|(MSIE)/i)) {
+        // handle windows phone 8 viewport
+        // see also http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode(
+                "@-ms-viewport{width:auto!important}"
+            )
+        );
+        document.getElementsByTagName("head")[0].
+            appendChild(msViewportStyle);
+    }
+
 });
