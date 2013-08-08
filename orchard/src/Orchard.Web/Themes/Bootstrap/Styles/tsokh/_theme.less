@@ -193,47 +193,79 @@
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
 
     body {
-    
-        margin-top:0px;
-
+        margin-top: 0px;
     }
 
     #content {
         margin-top: -20px;
     }
 
-    img {
-        max-width: 100%;
+    div.zone-after-main {
+        margin-left: -20px;
+        margin-right: -20px;
+
+        > article.widget-sticky-footer {
+            position: relative;
+            left: 20px;
+        }
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+    body {
+        margin-top: 0px;
     }
 
-    #myCarousel {
+    #content {
+        margin-top: -20px;
+    }
 
-        &.affix {
-            top: 0;
-            position: relative;
-            width: auto;
-        }
+    div.well > div.zone {
 
-        div.carousel-inner {
+        > article {
+            #myCarousel {
 
-            div.item {
-                width: 330px;
-
-                img {
-                    width: 320px;
+                &.affix {
+                    left: 50%;
+                    position: relative;
+                    top: 0;
                 }
             }
         }
+    }
+
+    div.zone-after-main > article.widget-sticky-footer {
+        display:none;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    div.well > div.zone {
+
+        > article {
+
+            #myCarousel {
+                width: 280px;
+
+                &.affix {
+                    margin-left: -140px;
+                }
+
+                a.carousel-control {
+                    width: 135px;
+                }
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
     }
 
     article.widget-aside-first {

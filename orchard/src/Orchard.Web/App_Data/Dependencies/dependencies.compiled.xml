@@ -2,9 +2,9 @@
 <Dependencies>
   <Dependency>
     <ExtensionId>Bootstrap</ExtensionId>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
-    <VirtualPath>~/Themes/Bootstrap/bin/Bootstrap.dll</VirtualPath>
-    <Hash>9240aaac6830b5ca</Hash>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/Bootstrap/Bootstrap.csproj</VirtualPath>
+    <Hash>cf8d9573311a744a</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Lucene</ExtensionId>

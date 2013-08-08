@@ -1,0 +1,9 @@
+﻿Open a nodeJS command prompt.
+
+Run the following three commands:
+
+cd C:\Users\Shaun\Documents\GitHub\tsokh\orchard\src\Orchard.Web\Themes\Bootstrap\Styles\tsokh>
+
+lessc -x bootstrap.less ../tsokh.min.css
+
+lessc -x responsive.less ../bootstrap-responsive.min.css
