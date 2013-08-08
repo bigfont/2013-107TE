@@ -862,6 +862,7 @@ div.zone-featured>article.widget-featured{background-color:#986120;background-im
 div.zone-featured>article.widget-featured>p{color:white;font-size:20px;line-height:20px;}
 div.zone-featured>article.widget-featured>h2{color:white;font-size:16px;line-height:16px;}
 div.zone-after-main{border-bottom:15px solid black;bottom:0px;left:0px;position:fixed;width:100%;}div.zone-after-main>article.widget-sticky-footer{background-color:transparent;background-image:url(../../../Media/Default/cssimgs/footer.PNG);background-repeat:no-repeat;background-position:center bottom;position:relative;bottom:-15px;height:200px;}
+div.zone-footer{margin-bottom:240px;}
 div.well>div.zone>article div.affix-top{}
 div.well>div.zone>article div.affix{left:25%;margin-left:-175px;position:fixed;top:39px;}
 div.well>div.zone>article div.affix-bottom{}
