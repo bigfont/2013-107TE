@@ -1,7 +1,12 @@
-﻿body {
+﻿
+/* TSOKH SWATCH
+================================================== */
+
+body {
     background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
     background-repeat: repeat;
     background-position: 0 40px;
+    margin-bottom: 0;
     margin-top: @navbarHeight;
 }
 
@@ -46,29 +51,29 @@ div.zone-featured {
     }
 }
 
-div.zone-after-main > article.widget-sticky-footer {
-    background-color: transparent;
-    background-image: url(../../../Media/Default/cssimgs/footer.PNG);
-    background-repeat: no-repeat;
-    background-position: center bottom -15px;
+div.zone-after-main {
     border-bottom: 15px solid black;
     bottom: 0px;
-    height: 200px;    
+    left: 0px;
     position: fixed;
     width: 100%;
+
+    > article.widget-sticky-footer {
+        background-color: transparent;
+        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        position: relative;
+        bottom: -15px;
+        height: 200px;
+    }
 }
 
 div.well > div.zone {
 
     > article {
 
-        > #myCarousel {
-            margin: 50px auto;
-            margin-top:50px;
-            padding: 0;
-            padding-top:55px;
-            position: relative;
-            width: 350px;
+        div {
 
             &.affix-top {
                 /*Add styles here */
@@ -77,8 +82,7 @@ div.well > div.zone {
             &.affix {
                 /*
                 * The data-offset is 220.
-                * Test using the Firebug Console with window.scroll(0, 221); 
-                */
+                * Test using the Firebug Console with window.scroll(0, 221); */
                 left: 25%;
                 margin-left: -175px;
                 position: fixed;
@@ -89,48 +93,56 @@ div.well > div.zone {
                 /*Add styles here */
             }
 
-            div.carousel-inner {
-                margin: auto;
+            > #myCarousel {
+                margin: 50px auto;
+                padding: 0;
+                padding-top: 55px; // make room for the carousel controls
+                width: 350px;
 
-                div.item {
-                    background: white;
-                    border: 2.5px solid #A97727;
+                div.carousel-inner {
                     margin: auto;
-                    padding: 10px;
-                    width: auto;
 
-                    img {
-                        border: 1px solid black;
-                        background: #A97727;
+                    div.item {
+                        background: white;
+                        border: 2.5px solid #A97727;
                         margin: auto;
-                        padding: 1px;
+                        padding: 10px;
                         width: auto;
+
+                        img {
+                            border: 1px solid black;
+                            background: #A97727;
+                            margin: auto;
+                            padding: 1px;
+                            width: auto;
+                        }
+                    }
+                }
+
+                ol.carousel-indicators {
+                    display: none; // they look nasty
+                }
+
+                a.carousel-control {
+                    top: 0px;
+                    color: white;
+                    border: 2.5px solid #C7973A;
+                    .border-radius(0);
+                    height: 50px;
+                    margin: 0;
+                    width: 170px;
+                    z-index: 10; // to ensure they're on top of background images
+                    &.left {
+                        left: 0;
+                    }
+
+                    &.right {
+                        right: 0;
                     }
                 }
             }
-
-            ol.carousel-indicators {
-                display: none; // they look nasty
-            }
-
-            a.carousel-control {
-                top:0px;
-                color: white;
-                border: 2.5px solid #C7973A;
-                .border-radius(0);
-                height:50px;
-                margin:0;
-                width:170px;
-                z-index: 10; // to ensure they're on top of background images
-                &.left {
-                    left:0;
-                }
-
-                &.right {
-                    right:0;
-                }
-            }
         }
+
 
         > p {
             margin: 0;
@@ -147,8 +159,6 @@ div.well > div.zone {
     }
 }
 
-ul.thumbnails > li > a.thumbnail > img {
-}
 /* Misc */
 div.well {
     background-color: transparent;
@@ -160,7 +170,7 @@ div.well {
 
 article.widget-featured,
 article.widget-sticky-footer,
- {
+{
     margin-left: -20px;
     margin-right: -20px;
 }

@@ -2,8 +2,21 @@
 
 Run the following three commands:
 
-cd C:\Users\Shaun\Documents\GitHub\tsokh\orchard\src\Orchard.Web\Themes\Bootstrap\Styles\tsokh>
+cd C:\Users\Shaun\Documents\GitHub\tsokh\orchard\src\Orchard.Web\Themes\Bootstrap\Styles\tsokh
 
 lessc -x bootstrap.less ../tsokh.min.css
 
 lessc -x responsive.less ../bootstrap-responsive.min.css
+
+lessc _theme.less ../theme.css
+
+
+Notes: 
+
+css load order is 
+
+1 tsokh.min.css (custom swatch)
+2 bootstrap-responsive.min.css
+3 bootswatch.min.css (what is this?)
+4 theme.min.css
+
