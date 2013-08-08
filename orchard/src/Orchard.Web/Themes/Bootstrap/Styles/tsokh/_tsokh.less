@@ -31,10 +31,13 @@
 
 
 /* GENERAL LAYOUT */
-body {
+html {
     background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
     background-repeat: repeat;
-    background-position: 0 40px;
+}
+
+body {
+    background-color: transparent;
     margin-bottom: 0;
     margin-top: @navbarHeight;
 }
@@ -43,17 +46,25 @@ div.zone {
     background-color: transparent;
 }
 
+.fullwidth() {
+    // make width by countering the body 20px padding.
+    margin-left: -20px;
+    margin-right: -20px;
+}
 
 
 /* ZONE FEATURED */
 div.zone-featured {
+    .fullwidth();
+
     > article.widget-featured {
+        // add gradient
         #gradient.vertical(#CC9933, #490E03);
-        background-position: top;
-        background-repeat: repeat-x;
         border-bottom: solid thin #490E03;
+        // add padding
         padding-top: 10px;
         padding-bottom: 10px;
+        // center contents
         text-align: center;
 
         > h1 {
@@ -149,7 +160,7 @@ div.well > div.zone {
                     height: 50px;
                     margin: 0;
                     width: 170px;
-                    z-index: 10; // to ensure they're on top of background images
+
                     &.left {
                         left: 0;
                     }
@@ -180,38 +191,37 @@ div.well > div.zone {
 
 /* ZONE CONTENT */
 div.zone-content {
-    padding-bottom: 500px;
-    border: thin solid pink;
+    /*Add style here */
 }
-
-
-
-/* ZONE AFTER MAIN */
-div.zone-after-main {
-    border-bottom: 15px solid black;
-    bottom: 0px;
-    left: 0px;
-    position: fixed;
-    width: 100%;
-
-    > article.widget-sticky-footer {
-        background-color: transparent;
-        background-image: url(../../../Media/Default/cssimgs/footer.PNG);
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        position: relative;
-        bottom: -15px;
-        height: 200px;
-    }
-}
-
 
 
 
 /* ZONE FOOTER */
-div.zone-footer {
-    // to prevent the sticky footer from covering the badge-of-honor
-    margin-bottom: 240px;
+footer#footer {
+    background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
+    display: table;
+    margin: 0;
+    z-index: 10;
+    position: absolute;
+    border-top: 1px solid #681304;
+
+    div.zone-footer {
+        // add a large bottom margin to prevent sticky footer overlap
+        margin-bottom: 250px;
+
+        > .widget-sticky-footer {
+            background-image: url(../../../Media/Default/cssimgs/footer.PNG);
+            background-origin: border-box;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            border-bottom:15px solid black;
+            bottom: 0;
+            height: 200px;
+            margin-left: -40px;
+            position: fixed;
+            width: 100%;
+        }
+    }
 }
 
 
@@ -222,12 +232,4 @@ div.well {
     line-height: 0; /* Remove the annoying margin at the bottom of elements inside the well. */
     margin: 0;
     padding: 0;
-}
-
-article.widget-featured,
-article.widget-sticky-footer,
-div.zone-after-main {
-    // make some articles full width by countering the body 20px padding.
-    margin-left: -20px;
-    margin-right: -20px;
 }

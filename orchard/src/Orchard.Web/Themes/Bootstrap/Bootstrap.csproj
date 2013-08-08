@@ -51,6 +51,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -325,7 +326,11 @@
     <Content Include="Styles\tsokh\utilities.less" />
     <Content Include="Styles\tsokh\variables.less" />
     <Content Include="Styles\tsokh\wells.less" />
-    <Content Include="Styles\tsokh\_tsokh-responsive.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\tsokh\_theme.less" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Styles\tsokh\_tsokh.less" />
   </ItemGroup>
   <PropertyGroup>

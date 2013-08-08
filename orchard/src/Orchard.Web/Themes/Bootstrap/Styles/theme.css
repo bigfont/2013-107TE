@@ -198,24 +198,23 @@
   #content {
     margin-top: -20px;
   }
-  div.well > div.zone > article #myCarousel.affix {
-    left: 50%;
-    position: relative;
-    top: 0;
+  div.well > div.zone > article div.affix {
+    position: static;
+    margin-left: 0px;
   }
-  div.zone-after-main > article.widget-sticky-footer {
+  div.zone-footer {
+    margin-bottom: 20px;
+  }
+  div.zone-footer > article.widget-sticky-footer {
     display: none;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  div.well > div.zone > article #myCarousel {
+  div.well > div.zone > article > div #myCarousel {
     width: 280px;
   }
-  div.well > div.zone > article #myCarousel.affix {
-    margin-left: -140px;
-  }
-  div.well > div.zone > article #myCarousel a.carousel-control {
+  div.well > div.zone > article > div #myCarousel a.carousel-control {
     width: 135px;
   }
   img {
