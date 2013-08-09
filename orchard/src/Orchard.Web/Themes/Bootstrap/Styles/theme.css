@@ -202,10 +202,10 @@
     position: static;
     margin-left: 0px;
   }
-  div.zone-footer {
+  footer#footer div.zone-footer {
     margin-bottom: 20px;
   }
-  div.zone-footer > article.widget-sticky-footer {
+  footer#footer div.zone-footer > article.widget-sticky-footer {
     display: none;
   }
 }
