@@ -214,6 +214,9 @@
   div.well > div.zone > article > div #myCarousel {
     width: 280px;
   }
+  div.well > div.zone > article > div #myCarousel div.carousel-inner div.item img {
+    width: 251px;
+  }
   div.well > div.zone > article > div #myCarousel a.carousel-control {
     width: 135px;
   }
