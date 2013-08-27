@@ -2,7 +2,8 @@
 ================================================== */
 #footer,
 #push {
-  height: 115px;
+  /*height: 115px; BigFont commented this out, because it was too much vertical space. */
+
 }
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -185,10 +186,6 @@
   #content {
     margin-top: -20px;
   }
-  div.zone-after-main > article.widget-sticky-footer {
-    position: relative;
-    left: 20px;
-  }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -201,12 +198,6 @@
   div.well > div.zone > article div.affix {
     position: static;
     margin-left: 0px;
-  }
-  footer#footer div.zone-footer {
-    margin-bottom: 20px;
-  }
-  footer#footer div.zone-footer > article.widget-sticky-footer {
-    display: none;
   }
 }
 /* Landscape phones and down */

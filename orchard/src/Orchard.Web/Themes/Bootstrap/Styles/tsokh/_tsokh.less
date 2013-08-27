@@ -197,7 +197,9 @@ div.zone-content {
 
 /* ZONE FOOTER */
 footer#footer {
-    display: table; // for shrink-wrap
+    margin-bottom: 5px;
+    padding: 0;
+
     hr {
         display: none;
     }
@@ -207,6 +209,7 @@ footer#footer {
     }
 
     div.zone-footer {
+        text-align: center;
 
         > .widget-sticky-footer {
             background-image: url(../../../Media/Default/cssimgs/footer.PNG);
@@ -216,9 +219,13 @@ footer#footer {
             border-bottom: 15px solid black;
             height: 200px;
         }
-        // badge of honor
+
         > div {
-            padding: 5px 50px 0px 50px;
+        
+            margin:auto;
+            margin-top:5px;
+            width:90%;
+        
         }
     }
 }
