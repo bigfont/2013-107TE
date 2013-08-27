@@ -2,8 +2,7 @@
 ================================================== */
 #footer,
 #push {
-  /*height: 115px; BigFont commented this out, because it was too much vertical space. */
-
+  height: 115px;
 }
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -233,5 +232,8 @@
   div.zone.zone-featured > article.widget-featured > h2 {
     font-size: 16px;
     line-height: 16px;
+  }
+  div.navbar div.navbar-inner div.container-fluid div.zone a.brand {
+    display: none;
   }
 }
