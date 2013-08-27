@@ -53,6 +53,43 @@ div.zone {
 }
 
 
+
+/* NAVBAR */
+
+div.navbar {
+
+    div.navbar-inner {
+
+        div.container-fluid {
+            div.zone {
+                a.brand {
+                    display: none;
+                }
+            }
+
+            .btn-navbar {
+
+                font-family:@serifFontFamily;
+
+                > span {
+                    font-size: 36px;
+                    float: left;
+                    line-height: 36px;
+                }
+
+                > div {
+                    float: right;
+                    margin-left: 10px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 /* ZONE FEATURED */
 div.zone-featured {
     .fullwidth();
@@ -221,11 +258,9 @@ footer#footer {
         }
 
         > div {
-        
-            margin:auto;
-            margin-top:5px;
-            width:90%;
-        
+            margin: auto;
+            margin-top: 5px;
+            width: 90%;
         }
     }
 }
