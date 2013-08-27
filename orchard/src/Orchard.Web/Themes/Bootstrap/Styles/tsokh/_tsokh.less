@@ -143,7 +143,7 @@ div.well > div.zone {
                             background: #A97727;
                             margin: auto;
                             padding: 1px;
-                            width:321px; // #myCarousel.width - 29px
+                            width: 321px; // #myCarousel.width - 29px
                         }
                     }
                 }
@@ -197,15 +197,16 @@ div.zone-content {
 
 /* ZONE FOOTER */
 footer#footer {
-    background-image: url(../../../Media/Default/cssimgs/homepage-background-section.JPG);
-    display: table;
-    margin: 0;
-    z-index: 10;
-    border-top: 5px solid #681304;
+    display: table; // for shrink-wrap
+    hr {
+        display: none;
+    }
+
+    div.container-fluid {
+        padding: 0;
+    }
 
     div.zone-footer {
-        // add a large bottom margin to prevent sticky footer overlap
-        margin-bottom: 250px;
 
         > .widget-sticky-footer {
             background-image: url(../../../Media/Default/cssimgs/footer.PNG);
@@ -213,15 +214,52 @@ footer#footer {
             background-position: center bottom;
             background-repeat: no-repeat;
             border-bottom: 15px solid black;
-            bottom: 0;
             height: 200px;
-            margin-left: -40px;
-            position: fixed;
-            width: 100%;
+        }
+        // badge of honor
+        > div {
+            padding: 5px 50px 0px 50px;
         }
     }
 }
 
+/* FOR DEBUGGING THE footer#footer layout.
+
+footer#footer {
+    border: thin solid red;
+    padding: 5px;
+}
+
+    footer#footer > .container-fluid {
+        border: thin solid orange;
+        padding: 5px;
+    }
+
+        footer#footer > .container-fluid > hr,
+        footer#footer > .container-fluid > .container-fluid {
+            border: thin solid yellow;
+            padding: 5px;
+        }
+
+            footer#footer > .container-fluid > .container-fluid > .row-fluid {
+                border: thin solid green;
+                padding: 5px;
+            }
+
+                footer#footer > .container-fluid > .container-fluid > .row-fluid > .zone-footer {
+                    border: thin solid blue;
+                    padding: 5px;
+                }
+
+                    footer#footer > .container-fluid > .container-fluid > .row-fluid > .zone-footer > .widget-sticky-footer {
+                        border: thin solid indigo;
+                        padding: 5px;
+                    }
+
+                    footer#footer > .container-fluid > .container-fluid > .row-fluid > .zone-footer > div {
+                        border: thin solid violet;
+                        padding: 5px;
+                    }*/
 
 /* MISC */
 div.well {
@@ -234,5 +272,5 @@ div.well {
 
 em {
     color: #C89431;
-    font-weight:900; // this is the maximum boldness
+    font-weight: 900; // this is the maximum boldness
 }

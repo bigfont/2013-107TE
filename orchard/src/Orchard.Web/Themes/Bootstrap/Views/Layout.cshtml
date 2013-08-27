@@ -1,6 +1,7 @@
 @functions {
     // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
-    string CalcuClassify(string[] zoneNames, string classNamePrefix) {
+    string CalcuClassify(string[] zoneNames, string classNamePrefix)
+    {
         var zoneCounter = 0;
         var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : ""; }).ToArray());
         return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
@@ -25,19 +26,22 @@
 
     //Add classes to the wrapper div to toggle aside widget zones on and off
     var asideClass = CalcuClassify(new[] { "AsideFirst", "AsideSecond" }, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
-    if (HasText(asideClass)) {
+    if (HasText(asideClass))
+    {
         Model.Classes.Add(asideClass);
     }
 
     //Add classes to the wrapper div to toggle tripel widget zones on and off
     var tripelClass = CalcuClassify(new[] { "TripelFirst", "TripelSecond", "TripelThird" }, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
-    if (HasText(tripelClass)) {
+    if (HasText(tripelClass))
+    {
         Model.Classes.Add(tripelClass);
     }
 
     //Add classes to the wrapper div to toggle quad widget zones on and off
     var footerQuadClass = CalcuClassify(new[] { "FooterQuadFirst", "FooterQuadSecond", "FooterQuadThird", "FooterQuadFourth" }, "split-"); // for quad-1, quad-2, etc. if any of the quad zones are filled
-    if (HasText(footerQuadClass)) {
+    if (HasText(footerQuadClass))
+    {
         Model.Classes.Add(footerQuadClass);
     }
 
@@ -49,7 +53,8 @@
     WorkContext.Layout.Navigation.Add(New.User(), "5"); // Login and dashboard links
 
     if (WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_NAV_SEARCH] != null
-     && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_NAV_SEARCH] == bool.TrueString) {
+     && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_NAV_SEARCH] == bool.TrueString)
+    {
         WorkContext.Layout.Navigation.Add(New.SearchNav(), "10"); // Search box (requires Search module)
     }
 
@@ -59,9 +64,17 @@
     Model.Id = "layout-wrapper";
     var tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
 }
+
+
+<style type="text/css" title="prototyping-and-testing">
+
+</style>
+
+
 <div id="layout-wrapper" style="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_STICKY_FOOTER] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_STICKY_FOOTER] == bool.TrueString ? "min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -115px;" : string.Empty /*change last value in margin to adjust footer height-don't forget sticky footer settings in theme.css*/)">
     @if (WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FIXED_NAV] != null
-     && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FIXED_NAV] == bool.TrueString) { 
+     && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FIXED_NAV] == bool.TrueString)
+    { 
         <div class="navbar navbar-fixed-top @(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_INVERSE_NAV] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_INVERSE_NAV] == bool.TrueString ? "navbar-inverse" : string.Empty)">
             <div class="navbar-inner">
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "container-fluid" : "container")">
@@ -70,11 +83,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    @if (Model.Header != null) {
+                    @if (Model.Header != null)
+                    {
                         @Zone(Model.Header)
                     }
                     <div class="nav-collapse collapse" id="main-menu">
-                        @if (Model.Navigation != null) {
+                        @if (Model.Navigation != null)
+                        {
                             @Zone(Model.Navigation)
                         }
                     </div>
@@ -82,18 +97,21 @@
             </div>
         </div>
     }
-    else {
+    else
+    {
         <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "container-fluid" : "container")">
             <header class="jumbotron subhead" id="overview">
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                     <div class="span12">
-                        @if (Model.Header != null) {
+                        @if (Model.Header != null)
+                        {
                             @Zone(Model.Header)
                         }
                     </div>
                 </div>
                 <div class="subnav" id="main-menu">
-                    @if (Model.Navigation != null) {
+                    @if (Model.Navigation != null)
+                    {
                         @Zone(Model.Navigation)
                     }
                 </div>
@@ -102,14 +120,16 @@
     }
     <section id="content">
         <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "container-fluid" : "container")">
-            @if (Model.BeforeMain != null) {
+            @if (Model.BeforeMain != null)
+            {
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                     <div class="span12">
                         @Zone(Model.BeforeMain)
                     </div>
                 </div>
             }
-            @if (Model.Featured != null) {
+            @if (Model.Featured != null)
+            {
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                     <div class="span12">
                         @Zone(Model.Featured)
@@ -117,7 +137,8 @@
                 </div>
             }
             <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
-                @if (Model.AsideFirst != null) {
+                @if (Model.AsideFirst != null)
+                {
                     <aside class="span6 span3_old">
                         <div class="well">
                             @Zone(Model.AsideFirst)&nbsp;
@@ -125,20 +146,25 @@
                     </aside>
                 }
                 <div class="@(HasText(asideClass) ? asideClass == "aside-1" || asideClass == "aside-2" ? "span6 span9_old" : asideClass == "aside-12" ? "span6" : "span12" : "span12")">
-                    @if (Model.Messages != null) {
+                    @if (Model.Messages != null)
+                    {
                         @Zone(Model.Messages)
                     }
-                    @if (Model.BeforeContent != null) {
+                    @if (Model.BeforeContent != null)
+                    {
                         @Zone(Model.BeforeContent)
                     }
-                    @if (Model.Content != null) {
+                    @if (Model.Content != null)
+                    {
                         @Zone(Model.Content)
                     }
-                    @if (Model.AfterContent != null) {
+                    @if (Model.AfterContent != null)
+                    {
                         @Zone(Model.AfterContent)
                     }
                 </div>
-                @if (Model.AsideSecond != null) {
+                @if (Model.AsideSecond != null)
+                {
                     <aside class="span6 span3_old">
                         <div class="well">
                             @Zone(Model.AsideSecond)&nbsp;
@@ -146,30 +172,35 @@
                     </aside>
                 }
             </div>
-            @if (Model.AfterMain != null) {
+            @if (Model.AfterMain != null)
+            {
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                     <div class="span12">
                         @Zone(Model.AfterMain)
                     </div>
                 </div>
             }
-            @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
+            @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null)
+            {
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
-                    @if (Model.TripelFirst != null) {
+                    @if (Model.TripelFirst != null)
+                    {
                         <!-- start: Tripel -->
                         <div class="@(HasText(tripelClass) ? tripelClass == "tripel-12" || tripelClass == "tripel-23" || tripelClass == "tripel-13" ? "span6" : tripelClass == "tripel-123" ? "span4" : "span12" : "span12")">
                             @Zone(Model.TripelFirst)
                         </div>
                         <!-- end: Tripel -->
                     }
-                    @if (Model.TripelSecond != null) {
+                    @if (Model.TripelSecond != null)
+                    {
                         <!-- start: Tripel -->
                         <div class="@(HasText(tripelClass) ? tripelClass == "tripel-12" || tripelClass == "tripel-23" || tripelClass == "tripel-13" ? "span6" : tripelClass == "tripel-123" ? "span4" : "span12" : "span12")">
                             @Zone(Model.TripelSecond)
                         </div>
                         <!-- end: Tripel -->
                     }
-                    @if (Model.TripelThird != null) {
+                    @if (Model.TripelThird != null)
+                    {
                         <!-- start: Tripel -->
                         <div class="@(HasText(tripelClass) ? tripelClass == "tripel-12" || tripelClass == "tripel-23" || tripelClass == "tripel-13" ? "span6" : tripelClass == "tripel-123" ? "span4" : "span12" : "span12")">
                             @Zone(Model.TripelThird)
@@ -178,25 +209,30 @@
                     }
                 </div>
             }
-            @if (Model.FooterQuadFirst != null || Model.FooterQuadSecond != null || Model.FooterQuadThird != null || Model.FooterQuadFourth != null) {
+            @if (Model.FooterQuadFirst != null || Model.FooterQuadSecond != null || Model.FooterQuadThird != null || Model.FooterQuadFourth != null)
+            {
                 <hr />
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
-                    @if (Model.FooterQuadFirst != null) {
+                    @if (Model.FooterQuadFirst != null)
+                    {
                         <div class="@(HasText(footerQuadClass) ? footerQuadClass == "split-1" || footerQuadClass == "split-2" || footerQuadClass == "split-3" || footerQuadClass == "split-4" ? "span12" : footerQuadClass == "split-12" || footerQuadClass == "split-13" || footerQuadClass == "split-14" || footerQuadClass == "split-23" || footerQuadClass == "split-24" || footerQuadClass == "split-34" ? "span6" : footerQuadClass == "split-123" || footerQuadClass == "split-124" || footerQuadClass == "split-134" || footerQuadClass == "split-234" ? "span4" : "span3" : "span12")">
                             @Zone(Model.FooterQuadFirst)
                         </div>
                     }
-                    @if (Model.FooterQuadSecond != null) {
+                    @if (Model.FooterQuadSecond != null)
+                    {
                         <div class="@(HasText(footerQuadClass) ? footerQuadClass == "split-1" || footerQuadClass == "split-2" || footerQuadClass == "split-3" || footerQuadClass == "split-4" ? "span12" : footerQuadClass == "split-12" || footerQuadClass == "split-13" || footerQuadClass == "split-14" || footerQuadClass == "split-23" || footerQuadClass == "split-24" || footerQuadClass == "split-34" ? "span6" : footerQuadClass == "split-123" || footerQuadClass == "split-124" || footerQuadClass == "split-134" || footerQuadClass == "split-234" ? "span4" : "span3" : "span12")">
                             @Zone(Model.FooterQuadSecond)
                         </div>
                     }
-                    @if (Model.FooterQuadThird != null) {
+                    @if (Model.FooterQuadThird != null)
+                    {
                         <div class="@(HasText(footerQuadClass) ? footerQuadClass == "split-1" || footerQuadClass == "split-2" || footerQuadClass == "split-3" || footerQuadClass == "split-4" ? "span12" : footerQuadClass == "split-12" || footerQuadClass == "split-13" || footerQuadClass == "split-14" || footerQuadClass == "split-23" || footerQuadClass == "split-24" || footerQuadClass == "split-34" ? "span6" : footerQuadClass == "split-123" || footerQuadClass == "split-124" || footerQuadClass == "split-134" || footerQuadClass == "split-234" ? "span4" : "span3" : "span12")">
                             @Zone(Model.FooterQuadThird)
                         </div>
                     }
-                    @if (Model.FooterQuadFourth != null) {
+                    @if (Model.FooterQuadFourth != null)
+                    {
                         <div class="@(HasText(footerQuadClass) ? footerQuadClass == "split-1" || footerQuadClass == "split-2" || footerQuadClass == "split-3" || footerQuadClass == "split-4" ? "span12" : footerQuadClass == "split-12" || footerQuadClass == "split-13" || footerQuadClass == "split-14" || footerQuadClass == "split-23" || footerQuadClass == "split-24" || footerQuadClass == "split-34" ? "span6" : footerQuadClass == "split-123" || footerQuadClass == "split-124" || footerQuadClass == "split-134" || footerQuadClass == "split-234" ? "span4" : "span3" : "span12")">
                             @Zone(Model.FooterQuadFourth)
                         </div>
@@ -206,14 +242,16 @@
         </div>
     </section>
     @if (WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_STICKY_FOOTER] != null
-        && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_STICKY_FOOTER] == bool.TrueString) {
+        && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_STICKY_FOOTER] == bool.TrueString)
+    {
         <div id="push"></div>
     }
 </div>
 <footer id="footer">
     <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "container-fluid" : "container")">
         <hr />
-        @if (Model.Footer != null) {
+        @if (Model.Footer != null)
+        {
             <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "container-fluid" : "container")">
                 <div class="@(WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] != null && WorkContext.HttpContext.Items[Bootstrap.Constants.ITEM_USE_FLUID_LAYOUT] == bool.TrueString ? "row-fluid" : "row")">
                     @Zone(Model.Footer)
