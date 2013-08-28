@@ -856,7 +856,7 @@ a.label:hover,a.label:focus,a.badge:hover,a.badge:focus{color:#ffffff;text-decor
 .show{display:block;}
 .invisible{visibility:hidden;}
 .affix{position:fixed;}
-@-webkit-viewport{width:device-width;}@-moz-viewport{width:device-width;}@-ms-viewport{width:device-width;}@-o-viewport{width:device-width;}@viewport{width:device-width;}html{background-image:url(../../../Media/Default/cssimgs/homepage-background-section.JPG);background-repeat:repeat;}
+html{background-image:url(../../../Media/Default/cssimgs/homepage-background-section.JPG);background-repeat:repeat;}
 body{background-color:transparent;margin-bottom:0;margin-top:40px;}
 div.zone{background-color:transparent;}
 div.navbar div.navbar-inner div.container-fluid .btn-navbar{font-family:Georgia,"Times New Roman",Times,serif;}div.navbar div.navbar-inner div.container-fluid .btn-navbar>span{font-size:36px;float:left;line-height:36px;}
