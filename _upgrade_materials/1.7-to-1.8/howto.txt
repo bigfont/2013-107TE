@@ -1,0 +1,11 @@
+Download Orchard.Source.1.8.zip
+Unblock the ZIP.
+Unzip to tsokh/orchard.source.1.8
+
+Ctrl + F5 on Orchard.Web in Visual Studio. 
+Do NOT run Orchard setup.
+
+Migrate
+- Copy paste App_Data (full)
+- Copy paste Media (full)
+- Import theme NuGet
